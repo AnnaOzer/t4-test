@@ -13,4 +13,10 @@ class Index
 
     }
 
+    public function actionHello()
+    {
+        echo 'Hello!';
+        die;
+    }
+
 }
