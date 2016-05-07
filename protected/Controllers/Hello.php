@@ -8,7 +8,7 @@ use T4\Mvc\Controller;
 class Hello
     extends Controller
 {
-    public function actionDefault()
+    public function actionWorld()
     {
         echo 'World!';
         die;
