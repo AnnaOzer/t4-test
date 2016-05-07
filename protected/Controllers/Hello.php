@@ -10,8 +10,9 @@ class Hello
 {
     public function actionWorld()
     {
-        var_dump($this->view);
-    }
+        // это присваивание и есть передача данных в шаблон
+        $this->data->foo = 'bar';
+}
 }
 
 /*
