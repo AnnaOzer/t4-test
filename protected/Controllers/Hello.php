@@ -10,7 +10,5 @@ class Hello
 {
     public function actionWorld()
     {
-        echo 'World!';
-        die;
     }
 }
