@@ -12,15 +12,14 @@ class Index
     public function actionDefault()
     {
         $obj = new Test();
-        $obj->foo = 'bar';
-        $obj['baz'] = 42;
+        $obj->fromArray(['foo' => 'bar', 'baz'=> 42]);
 
         echo $obj->foo;
+        echo $obj->baz;
+
+        // bar42
         die;
 
-        /*
-         128
-         **/
 
     }
 
