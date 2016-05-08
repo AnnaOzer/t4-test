@@ -15,17 +15,16 @@ class Index
         $obj->foo = 'bar';
         $obj['baz'] = 42;
 
-        echo $obj['foo'];
-        echo '<br>';
-        echo $obj->baz;
+        foreach ($obj as $k => $v) {
+            echo $k . ' => ' . $v;
+            echo '<br>';
+        }
+        /*
+        foo => bar
+        baz => 42
+        */
 
         die;
-
-        /*
-         выведет
-        bar
-        42
-         * */
 
     }
 
