@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Components\Test;
+use T4\Core\Config;
 use T4\Mvc\Controller;
 
 class Index
@@ -11,15 +11,10 @@ class Index
 
     public function actionDefault()
     {
-        $obj = new Test;
-
-
-        $obj->foo->bar->baz = 42;
-        var_dump($obj);
+        $config = new Config(['foo'=>'bar', 'baz'=>42]);
+        var_dump($config->foo); // string(3) "bar"
 
         die;
-
-
     }
 
 
