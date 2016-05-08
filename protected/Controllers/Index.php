@@ -17,7 +17,8 @@ class Index
         echo $obj->foo;
         echo $obj->baz;
 
-        // bar42
+        var_dump($obj->toArray());
+
         die;
 
 
