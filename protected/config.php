@@ -1,11 +1,5 @@
 <?php
 
 return [
-    /*
-    'extensions' => [
-        'bootstrap' => [
-
-        ]
-    ]
-    */
+    'name' => 'Мой супер пупер личный проект'
 ];
