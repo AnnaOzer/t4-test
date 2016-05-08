@@ -13,22 +13,20 @@ class Index
     {
         $obj = new Test();
         $obj->foo = 'bar';
+        $obj['baz'] = 42;
+
+        foreach ($obj as $k => $v)
+        {
+            echo $k . '=>' . $v;
+            echo '<br>';
+        }
 
         /*
-         Fatal error: Uncaught Error: Class 'App\Components\Test'
-        not found in C:\Server\OpenServer\domains\t4-test\protected\Controllers\Index.php:14
-        Stack trace: #0 C:\Server\OpenServer\domains\t4-test\vendor\pr-of-it\t4\framework\Mvc\Controller.php(177):
-        App\Controllers\Index->actionDefault() #1
-        C:\Server\OpenServer\domains\t4-test\vendor\pr-of-it\t4\framework\Mvc\Application.php(112):
-        T4\Mvc\Controller->action('Default', Array) #2
-        C:\Server\OpenServer\domains\t4-test\vendor\pr-of-it\t4\framework\Mvc\Application.php(87):
-        T4\Mvc\Application->runRoute(Object(T4\Mvc\Route)) #3
-        C:\Server\OpenServer\domains\t4-test\public\index.php(12): T4\Mvc\Application->run() #4
-        {main} thrown in C:\Server\OpenServer\domains\t4-test\protected\Controllers\Index.php on line 14
+         foo=>bar!!!
+         baz=>42
          */
 
         die;
-
     }
 
 

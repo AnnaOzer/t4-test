@@ -9,6 +9,6 @@ class Test
 {
     protected function setFoo($value)
     {
-        echo 'Foo setter!';
+        $this->__data['foo'] = $value  . '!!!';
     }
 } 
