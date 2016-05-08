@@ -11,7 +11,7 @@ class Index
 
     public function actionDefault()
     {
-        $obj = new Std();
+        $obj = new Test();
         $obj->foo = 'bar';
         $obj['baz'] = 42;
 
