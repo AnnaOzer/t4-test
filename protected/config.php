@@ -1,3 +1,11 @@
 <?php
 
-return [];
+return [
+    /*
+    'extensions' => [
+        'bootstrap' => [
+
+        ]
+    ]
+    */
+];

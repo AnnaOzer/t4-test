@@ -11,11 +11,7 @@ class Index
 
     public function actionDefault()
     {
-        $config = new Config(ROOT_PATH_PUBLIC . '/test.config.php');
-        $config->baz = 128;
-        $config->save();
 
-        die;
     }
 
 
