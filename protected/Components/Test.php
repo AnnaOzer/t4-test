@@ -7,8 +7,8 @@ use T4\Core\Std;
 class Test
     extends Std
 {
-    protected function setFoo($value)
+    protected function getFoo()
     {
-        $this->__data['foo'] = $value  . '!!!';
+        return 128;
     }
 } 

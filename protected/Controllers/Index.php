@@ -15,18 +15,13 @@ class Index
         $obj->foo = 'bar';
         $obj['baz'] = 42;
 
-        foreach ($obj as $k => $v)
-        {
-            echo $k . '=>' . $v;
-            echo '<br>';
-        }
+        echo $obj->foo;
+        die;
 
         /*
-         foo=>bar!!!
-         baz=>42
-         */
+         128
+         **/
 
-        die;
     }
 
 
