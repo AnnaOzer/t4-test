@@ -11,8 +11,8 @@ class Index
 
     public function actionDefault()
     {
-        $obj = new Test();
-        $obj->fromArray(['foo' => 'bar', 'baz'=> 42]);
+        $obj = new Test(['foo' => 'bar', 'baz'=> 42]);
+
 
         echo $obj->foo;
         echo $obj->baz;
