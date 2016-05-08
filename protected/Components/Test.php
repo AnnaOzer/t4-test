@@ -2,10 +2,9 @@
 
 namespace App\Components;
 
-use T4\Core\Std;
+use T4\Core\TStdGetSet;
 
 class Test
-    extends Std
 {
-
+    use TStdGetSet;
 } 

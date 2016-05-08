@@ -11,13 +11,11 @@ class Index
 
     public function actionDefault()
     {
-        $obj = new Test(['foo' => 'bar', 'baz'=> 42]);
+        $obj = new Test;
 
 
-        echo $obj->foo;
-        echo $obj->baz;
-
-        var_dump($obj->toArray());
+        $obj->foo->bar->baz = 42;
+        var_dump($obj);
 
         die;
 
