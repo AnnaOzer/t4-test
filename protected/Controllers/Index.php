@@ -13,10 +13,19 @@ class Index
     {
         $obj = new Std();
         $obj->foo = 'bar';
-        $obj->baz = 42;
+        $obj['baz'] = 42;
 
-        echo $obj->foo;
+        echo $obj['foo'];
+        echo '<br>';
+        echo $obj->baz;
+
         die;
+
+        /*
+         выведет
+        bar
+        42
+         * */
 
     }
 
