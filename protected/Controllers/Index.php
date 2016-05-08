@@ -11,7 +11,7 @@ class Index
 
     public function actionDefault()
     {
-        $config = new Config(['foo'=>'bar', 'baz'=>42]);
+        $config = new Config(ROOT_PATH_PUBLIC . '/test.config.php');
         var_dump($config->foo); // string(3) "bar"
 
         die;
