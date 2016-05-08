@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'foo' => 'bar',
-    'baz' => 42,
+  'foo' => 'bar',
+  'baz' => 128,
 ];
