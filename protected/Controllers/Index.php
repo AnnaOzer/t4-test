@@ -11,7 +11,8 @@ class Index
 
     public function actionDefault()
     {
-
+        $config = new Config(ROOT_PATH_PROTECTED . '/config.php');
+        $this->data->name = $config->name;
     }
 
 
