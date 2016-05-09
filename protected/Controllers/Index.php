@@ -13,7 +13,7 @@ class Index
     {
         $config = new Config(ROOT_PATH_PROTECTED . '/config.php');
         $this->data->name = $config->name;
-        var_dump($this->app->config);
+
     }
 
 
