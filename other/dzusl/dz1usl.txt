@@ -10,3 +10,5 @@
 5.1. /about.html
 5.2. /photo/
 5.3. /photo/last.html
+6* Добавьте в конфиг 'extensions' => ['bootstrap' => ['theme' => 'cosmo'] ]
+и попробуйте объяснить результат (проследить по коду)
