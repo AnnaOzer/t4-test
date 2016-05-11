@@ -11,10 +11,15 @@ class Index
 
     public function actionDefault()
     {
-        $config = new Config(ROOT_PATH_PROTECTED . '/config.php');
+        // $config = new Config(ROOT_PATH_PROTECTED . '/config.php');
+        $config = $this->app->config;
         $this->data->name = $config->name;
 
     }
 
 
 }
+
+/*
+ * https://github.com/AnnaOzer/t4-test/blob/master/protected/Controllers/Index.php#L14 - можно и так,
+ * а можно и $this->app->config, что проще*/
