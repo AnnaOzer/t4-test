@@ -11,7 +11,7 @@ class Index
     protected function beforeAction($action)
     {
         echo 'Before!';
-        return false;
+        return true;
 
     }
 
@@ -20,5 +20,11 @@ class Index
         echo 'Test'; // ничего не выведет
     }
 
-
+    public function afterAction($action)
+    {
+        echo 'After!';
+    }
 }
+
+
+// Before!TestAfter!
