@@ -10,7 +10,7 @@ class Index
 
     protected function access($action)
     {
-        return true;
+        return false;
     }
 
     public function actionDefault()
@@ -22,3 +22,4 @@ class Index
 
 
 }
+// Access denied
