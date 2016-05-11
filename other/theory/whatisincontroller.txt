@@ -36,9 +36,18 @@ $this->app->db это ленивая инициализация соединен
 
 $this->app->extensions
 $this->app->request
+объект содержащий в себе данные из запроса от пользователя
+это объект и строка одновременно
+еще один пример полиморфизма
+можно смотреть что в get
+но фильтрации не происходит
+зато $this->app->request->files отфильтрованный
+
 $this->app->router
 $this->app->user
+
 $this->app->assets
+
 $this->app->flash
 
 $this->view
