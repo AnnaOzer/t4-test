@@ -10,8 +10,7 @@ class Index
 
     protected function access($action)
     {
-        echo $action;
-        die;
+        return true;
     }
 
     public function actionDefault()
@@ -23,4 +22,3 @@ class Index
 
 
 }
-// Default
