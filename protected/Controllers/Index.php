@@ -8,22 +8,17 @@ class Index
     extends Controller
 {
 
-    protected function access($action)
+    protected function beforeAction($action)
     {
-        if($this->app->user->hasRole('admin')) {
-            return true;
-        }
-        return false;
+        echo 'Before!';
+        return true;
 
     }
 
     public function actionDefault()
     {
-        $config = $this->app->config;
-        $this->data->name = $config->name;
-
+        echo 'Test';
     }
 
 
 }
-// Access denied
