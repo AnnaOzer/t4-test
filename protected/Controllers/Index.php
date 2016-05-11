@@ -11,13 +11,13 @@ class Index
     protected function beforeAction($action)
     {
         echo 'Before!';
-        return true;
+        return false;
 
     }
 
     public function actionDefault()
     {
-        echo 'Test';
+        echo 'Test'; // ничего не выведет
     }
 
 
