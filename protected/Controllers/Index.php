@@ -7,18 +7,13 @@ use T4\Mvc\Controller;
 class Index
     extends Controller
 {
-
-
-
     public function actionDefault()
     {
-        $this->app->assets->publishCssFile('/Layouts/test.css');
+        $this->app->assets->publish('/Layouts/assets/');
+        $this->app->assets->publishCssFile('/Layouts/assets/test.css');
     }
 
 
 }
 
-/*
-<link rel="stylesheet" href="/Assets/2ec6e48e0d61/test.css">
-*/
 
