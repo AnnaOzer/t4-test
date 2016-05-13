@@ -11,8 +11,13 @@ class Index
     public function actionDefault()
     {
         $this->data->name = 'Иванов';
+    }
 
-}
+    public function actionTest()
+    {
+        echo 'Test';
+        die;
+    }
 }
 
 
