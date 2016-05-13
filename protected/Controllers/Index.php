@@ -9,11 +9,11 @@ class Index
 {
     public function actionDefault()
     {
-        $this->app->assets->publish('/Layouts/assets/');
-        $this->app->assets->publishCssFile('/Layouts/assets/test.css');
-    }
+        $this->app->flash->message = 'Hello!';
+        var_dump($this->app->flash->message); // Hello!
+        var_dump($this->app->flash->message); // NULL
+        die;
 
-
-}
+}}
 
 
