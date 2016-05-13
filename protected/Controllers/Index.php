@@ -13,9 +13,13 @@ class Index
         $this->data->name = 'Иванов';
     }
 
-    public function actionTest()
+    public function actionTest($id)
+        // важно правильно назвать аргументы
+        // чтобы название здесь совпало с тем которое во внутреннем пути
+
     {
         echo 'Test';
+        echo 'Id:' . $id;
         die;
     }
 }
