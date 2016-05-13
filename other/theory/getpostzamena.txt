@@ -1,0 +1,21 @@
+когда в экшене пишем аргументы
+фреймворк смотрит и
+
+public function actionFoo($id)
+в $id будет подставлено первое из
+- параметр роута id
+- $_POST['id']
+- $_GET['id']
+- значение по умолчанию
+
+важная особенность
+через type-hinting работает приведение типов!
+включая  даже приведение к классу (лишь бы он реализовывал интерфейс
+IArrayable)
+
+public function actionFoo($id)
+public function actionBar($id = 0)
+public function actionBaz(int $id)
+public function actionFoo(Std $data)
+
+считается хорошим тоном писать значения по умолчанию для аргументов экшена

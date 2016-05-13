@@ -8,17 +8,14 @@ use T4\Mvc\Route;
 class Index
     extends Controller
 {
-    public function actionDefault()
+    public function actionDefault($id = 0, $name = null)
     {
-        $this->data->name = 'Иванов';
-    }
-
-    public function actionTest($id)
-    {
-        echo 'Test';
-        echo 'Id:' . $id;
+        echo 'Id: ' . $id;
+        echo 'Name: ' . $name;
         die;
     }
+
+
 }
 
 
