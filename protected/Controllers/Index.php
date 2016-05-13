@@ -8,7 +8,7 @@ use T4\Mvc\Route;
 class Index
     extends Controller
 {
-    public function actionDefault($id = 0, $name = null)
+    public function actionDefault(int $id = 0, $name = null)
     {
         echo 'Id: ' . $id;
         echo 'Name: ' . $name;
