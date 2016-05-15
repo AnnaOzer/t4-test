@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Article;
+namespace App\Models;
 use T4\Core\Std;
 
 class Article
