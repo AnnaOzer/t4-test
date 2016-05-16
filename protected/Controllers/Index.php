@@ -13,6 +13,6 @@ class Index
     extends Controller
 {
     public function actionDefault() {
-        $this->data->article = News::findOne(1);
+
     }
 }
