@@ -2,6 +2,9 @@
 
 return [
     '/news/all' => '//Newsarticles/all',
-    '/news/<1>' => '//Newsarticles/one(id=<1>)'
+    '/news/create' => '//Newsarticles/Create',
+    '/news/add' => '//Newsarticles/Add',
+    '/news/<1>' => '//Newsarticles/One(id=<1>)',
+
 
 ];

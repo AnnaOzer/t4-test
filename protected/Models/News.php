@@ -15,39 +15,31 @@ extends Config
 {
     public function findAll()
     {
-        $news = include __DIR__ . '/../Db/newsfile.php';
-        $allNews = [];
-
-        foreach ($news as $new) {
-
-            $obj = new Article;
-            $obj->fromArray($new);
-            $allNews[] = $obj;
-        }
-
-        return $allNews;
-
+        return $news = include __DIR__ . '/../Db/newsfile.php';
     }
 
     public static function findOne($id)
     {
         $news = include __DIR__ . '/../Db/newsfile.php';
-        $oneNew = [];
-        foreach ($news as $new) {
-
-            if($new['id'] == $id) {
-                $oneNew = $new;
-            }
-        }
-
-        if (!empty($oneNew)) {
-            $obj = new Article();
-            $obj->fromArray($oneNew);
-            return $obj;
-        } else {
-            throw new \Exception ('Нет данных');
-        }
+        return $news[$id];
     }
 
+    public static function findLast()
+    {
+        $news = include __DIR__ . '/../Db/newsfile.php';
+        return end($news);
+    }
 
+    public function addOne(Article $art)
+    {
+        $smallDatabase = new Config(ROOT_PATH_PROTECTED . '/Db/newsfile.php');
+        $smallDatabase[] = $art;
+        var_dump($smallDatabase);
+        die;
+        $smallDatabase->save();
+    }
+
+    public function __construct() {
+
+    }
 } 

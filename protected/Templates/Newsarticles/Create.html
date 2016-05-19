@@ -1,0 +1,13 @@
+{% extends 'Index.html' %}
+
+{% block content %}
+        <h1>Добавление новой новости</h1>
+
+    <form enctype="multipart/form-data" method="post" action="Add">
+        Название: <input type="text" name="article[title]"><br>
+        Текст: <textarea name="article[text]"></textarea><br>
+        Картинка: <input type="file" name="article[image]"><br>
+        <input type="submit">
+    </form>
+
+{% endblock %}
