@@ -26,7 +26,7 @@ class Newsarticles
 
         $this->data->articles = News::findAll();
 
-    }одятся
+    }
 
     public function actionOne(int $id=0) {
 
