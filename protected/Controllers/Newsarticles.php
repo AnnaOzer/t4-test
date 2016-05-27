@@ -11,20 +11,30 @@ use T4\Core\Config;
 class Newsarticles
     extends Controller
 {
+    public function beforeAction($action) {
+        $this->app->assets->publish('/Layouts/assets/');
+        return true;
+    }
 
     public function actionDefault() {
+
         $this->data->articles = News::findAll();
+
     }
 
     public function actionAll() {
+
         $this->data->articles = News::findAll();
-    }
+
+    }одятся
 
     public function actionOne(int $id=0) {
+
         $this->data->article = News::findOne($id);
     }
 
     public function actionLast() {
+
         $this->data->article = News::findLast();
     }
 

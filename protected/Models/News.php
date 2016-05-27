@@ -30,16 +30,4 @@ extends Config
         return end($news);
     }
 
-    public function addOne(Article $art)
-    {
-        $smallDatabase = new Config(ROOT_PATH_PROTECTED . '/Db/newsfile.php');
-        $smallDatabase[] = $art;
-        var_dump($smallDatabase);
-        die;
-        $smallDatabase->save();
-    }
-
-    public function __construct() {
-
-    }
 } 
