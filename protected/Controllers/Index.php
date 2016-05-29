@@ -14,8 +14,12 @@ class Index
     public function actionDefault()
     {
         $persons = Person::findAll();
-        echo $persons[0]->lastName;
-        echo $persons[1]->lastName;
-        echo $persons[2]->lastName;
+
+        foreach ($persons as $person)  {
+            echo $person->lastName;
+        }
+
+        $person = $persons->findByAttributes(['lastName' => 'Сидорова']);
+        var_dump($person);
     }
 }
