@@ -19,7 +19,7 @@ class Index
             echo $person->lastName;
         }
 
-        $person = $persons->findByAttributes(['lastName' => 'Сидорова']);
-        var_dump($person);
+        $names = $persons->collect('lastName');
+        var_dump($names);// array(3) { [0]=> string(12) "Иванов" [1]=> string(16) "Сидорова" [2]=> string(12) "Рублев" }
     }
 }
