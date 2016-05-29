@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\Person;
 use T4\Dbal\Connection;
 use T4\Mvc\Controller;
 use T4\Core\Config;
@@ -12,11 +13,10 @@ class Index
 {
     public function actionDefault()
     {
-        $conn = $this->app->db->default;
-        $data = $conn->query('SELECT AVG(age) FROM persons')->fetchScalar();
-
-        var_dump($data); // string(7) "30.0000"
-
+        $data = Person::findAll();
+        var_dump($data); // object(T4\Core\Collection)#46 (1) { [...
+        var_dump($data[0]->firstName);
+        var_dump($data[0]->lastName);
         die;
     }
 }
