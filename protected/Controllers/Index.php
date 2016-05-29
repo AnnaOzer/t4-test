@@ -13,13 +13,18 @@ class Index
 {
     public function actionDefault()
     {
-        // получил объект
-        $person = Person::findByPK(3);
+        // создал объект
+        $person = new Person();
 
         // с объектом что-то сделал
-        $person->age = 45;
+        $person->firstName = 'Андрей';
+        $person->lastName = 'Рублев';
+        $person->age = 500;
 
         // сохранил в БД
         $person->save();
+
+        // узнал номер id новой записи
+        echo $person->getPk();
     }
 }
