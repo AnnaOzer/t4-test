@@ -13,8 +13,13 @@ class Index
 {
     public function actionDefault()
     {
-        $data = Person::findByPK(2);
-        var_dump($data->lastName);
-        die;
+        // получил объект
+        $person = Person::findByPK(3);
+
+        // с объектом что-то сделал
+        $person->age = 45;
+
+        // сохранил в БД
+        $person->save();
     }
 }
