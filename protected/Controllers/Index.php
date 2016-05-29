@@ -13,8 +13,9 @@ class Index
 {
     public function actionDefault()
     {
-        $person = Person::findByPk(5);
-        $person->delete();
-        $person->isDeleted(); // нет вывода
+        $persons = Person::findAll();
+        echo $persons[0]->lastName;
+        echo $persons[1]->lastName;
+        echo $persons[2]->lastName;
     }
 }
