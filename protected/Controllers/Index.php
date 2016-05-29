@@ -12,17 +12,7 @@ class Index
 {
     public function actionDefault()
     {
-        // конфиг
-        $config = new Config([
-            'driver' => 'mysql',
-            'host' => '127.0.0.1',
-            'user' => 'root',
-            'password' => '',
-            'dbname' => 't4test'
-        ]);
-
-        // соединение
-        $conn = new Connection($config);
+        $conn = $this->app->db->default;
 
         var_dump($conn);
         die;
