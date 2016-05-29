@@ -49,7 +49,7 @@ execute  с параметрами
 rowCount()
 fetch получить очередную запись, для организации циклов
 fetchAll
-fetchScalar добавлено к обычному PDO
+fetchScalar добавлено к обычному PDO, удобно когда надо получить ровно 1 запись ровно с 1 столбцом
 
 пример на получение данных из БД
 таблица persons, __id serial, firstName varchar 50, lastName varchar 50, age int
