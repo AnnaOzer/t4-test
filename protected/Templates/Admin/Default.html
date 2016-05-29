@@ -1,0 +1,13 @@
+{% extends 'Index.html' %}
+
+{% block content %}
+    <table class="table table-striped">
+        {% for item in items %}
+            <tr>
+                <td>{{ item.firstName }}</td>
+                <td>{{ item.lastName }}</td>
+                <td>{{ item.age }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
