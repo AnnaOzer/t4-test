@@ -47,6 +47,14 @@ commitTransaction
 есть методы
 execute  с параметрами
 rowCount()
-fetch получить очередную запись
+fetch получить очередную запись, для организации циклов
 fetchAll
 fetchScalar добавлено к обычному PDO
+
+пример на получение данных из БД
+таблица persons, __id serial, firstName varchar 50, lastName varchar 50, age int
+Иван Иванов 42
+Екатерина Сидорова 18
+
+
+ФНС имя и фамилию человека обрезает до 50 символов
