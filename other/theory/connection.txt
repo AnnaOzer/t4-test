@@ -30,4 +30,23 @@ default
 как только мы обратились хотя бы раз с какому-либо соединению,
 как вместо конфига будет само соединение
 т.е. не Config а Connection
+т.е. связь по требованию
 
+Методы класса Collection
+prepare готовит запрос к выполнению, возвращает объект класса стейтмент
+надо если работать с подготовленными запросами
+execute возвращает true/false, запросы кроме select
+query для select
+возвращает Statement c ответом внутри него
+lastInsertId
+beginTransaction
+rollbackTransaction
+commitTransaction
+
+класс \T4\Dbal\Statement наследуется от PDOStatement
+есть методы
+execute  с параметрами
+rowCount()
+fetch получить очередную запись
+fetchAll
+fetchScalar добавлено к обычному PDO
