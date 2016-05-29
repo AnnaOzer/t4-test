@@ -19,7 +19,7 @@ class Index
             echo $person->lastName;
         }
 
-        $p = $persons->slice(0,2);
+        $p = $persons->slice(-1,1);
         var_dump($p);
     }
 }
