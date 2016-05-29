@@ -13,8 +13,8 @@ class Index
 {
     public function actionDefault()
     {
-        $data = Person::find(['where' => 'age=18']);
-        var_dump($data[0]->lastName);
+        $data = Person::findByPK(2);
+        var_dump($data->lastName);
         die;
     }
 }
