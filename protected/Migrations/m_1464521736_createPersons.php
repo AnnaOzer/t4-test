@@ -16,8 +16,6 @@ class m_1464521736_createPersons
             'age' => ['type' => 'int'],
         ]);
 
-        // можно сдалать что угодно через запрос к базе напрямик
-        // $this->db->execute('...');
     }
 
     public function down()
