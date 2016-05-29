@@ -19,9 +19,7 @@ class Index
             echo $person->lastName;
         }
 
-        $p = $persons->filter(function (Person $x) {
-            return $x->age > 18;
-        });
+        $p = $persons->slice(0,2);
         var_dump($p);
     }
 }
