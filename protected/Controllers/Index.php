@@ -13,9 +13,7 @@ class Index
 {
     public function actionDefault()
     {
-        $data = Person::findAll();
-        var_dump($data); // object(T4\Core\Collection)#46 (1) { [...
-        var_dump($data[0]->firstName);
+        $data = Person::find(['where' => 'age=18']);
         var_dump($data[0]->lastName);
         die;
     }
