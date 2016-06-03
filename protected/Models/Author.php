@@ -21,6 +21,9 @@ class Author
         'columns' => [
             'name' => ['type' => 'string'],
             'birthday' => ['type' => 'date']
+        ],
+        'relations' => [
+            'books' => ['type' => self::HAS_MANY, 'model' => Book::class],
         ]
     ];
 } 
