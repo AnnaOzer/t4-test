@@ -15,7 +15,7 @@ class Index
     public function actionDefault()
     {
         $book = Book::findByPK(1);
-        var_dump($book->author);
+        var_dump($book->author->name);
         die;
     }
 }
