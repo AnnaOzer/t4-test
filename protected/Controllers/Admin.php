@@ -15,6 +15,10 @@ class Admin
         $this->data->items = Person::findAll();
     }
 
+    public function actionAdd()
+    {
+    }
+
     public function actionDelete($id)
     {
         $item = Person::findByPk($id);
