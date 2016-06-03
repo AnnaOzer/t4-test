@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use T4\Dbal\QueryBuilder;
 use T4\Mvc\Controller;
+use App\Models\Person;
 
 
 
@@ -18,10 +19,9 @@ class Index
             ->select()
             ->from('persons')
             ->where('age>18')
-            ->offset(100)
             ->limit(10);
 
-        echo $query->getQuery('mysql'); // SELECT * FROM `persons` AS t1 WHERE age>18 LIMIT 100, 10
-        die;
+        $data = Person::getDbConnection()->query($query)->fetchAll();
+        var_dump($data);
     }
 }
