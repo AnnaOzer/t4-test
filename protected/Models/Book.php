@@ -10,6 +10,7 @@ use T4\Orm\Model;
  *
  * @property string $title
  * @property string $birthday
+ * @property \App\Models\Author $author
 
  */
 
