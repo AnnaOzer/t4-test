@@ -18,7 +18,9 @@ class Admin
     public function actionDelete($id)
     {
         $item = Person::findByPk($id);
-        $item->delete();
+        if (!empty($item)) {
+            $item->delete();
+        }
         $this->redirect('/admin/');
     }
 } 
