@@ -13,6 +13,12 @@ class Admin
     public function actionDefault()
     {
         $this->data->items = Person::findAll();
-     }
+    }
 
+    public function actionDelete($id)
+    {
+        $item = Person::findByPk(id);
+        $item->delete();
+        $this->redirect('/admin/');
+    }
 } 
