@@ -21,9 +21,10 @@ class Admin
 
     public function actionSave($person)
     {
-        $item = new Person($person);
-        $item->fill($person);
-        $item->save();
+        $item =
+            (new Person($person))
+            ->fill($person)
+            ->save();
         $this->redirect('/admin/');
     }
 
