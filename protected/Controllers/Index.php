@@ -17,9 +17,11 @@ class Index
         $query
             ->select()
             ->from('persons')
-            ->where('age>18');
+            ->where('age>18')
+            ->offset(100)
+            ->limit(10);
 
-        echo $query->getQuery('mysql'); // SELECT * FROM `persons` AS t1 WHERE age>18
+        echo $query->getQuery('mysql'); // SELECT * FROM `persons` AS t1 WHERE age>18 LIMIT 100, 10
         die;
     }
 }
