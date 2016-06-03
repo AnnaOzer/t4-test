@@ -19,6 +19,12 @@ class Admin
     {
     }
 
+    public function actionSave(Person $person)
+    {
+        $person->save();
+        $this->redirect('/admin/');
+    }
+
     public function actionDelete($id)
     {
         $item = Person::findByPk($id);
