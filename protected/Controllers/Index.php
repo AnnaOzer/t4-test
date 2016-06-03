@@ -2,10 +2,9 @@
 
 namespace App\Controllers;
 
-use App\Models\Person;
-use T4\Dbal\Connection;
+use T4\Dbal\QueryBuilder;
 use T4\Mvc\Controller;
-use T4\Core\Config;
+
 
 
 class Index
@@ -13,8 +12,14 @@ class Index
 {
     public function actionDefault()
     {
-        $persons = Person::findAll();
-        $persons->setAge(12);
-        $persons->save();
+        $query = new QueryBuilder();
+
+        $query
+            ->select()
+            ->from('persons')
+            ->where('age>18');
+
+        echo $query->getQuery('mysql'); // SELECT * FROM `persons` AS t1 WHERE age>18
+        die;
     }
 }
