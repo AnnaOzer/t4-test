@@ -15,7 +15,12 @@ class Index
 {
     public function actionDefault()
     {
-        $book = Book::findByPk(3);
+        $book = Book::findByTitle('Война и мир');
+        $book->authors->add(
+            Author::findByName('Михаил Булгаков')
+        );
+        $book->save();
+
         var_dump($book->authors);
         die;
     }
