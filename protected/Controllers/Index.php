@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\Book;
 use T4\Dbal\QueryBuilder;
 use T4\Mvc\Controller;
 use App\Models\Person;
@@ -13,15 +14,7 @@ class Index
 {
     public function actionDefault()
     {
-        $query = new QueryBuilder();
-
-        $query
-            ->select()
-            ->from('persons')
-            ->where('age>18')
-            ->limit(10);
-
-        $data = Person::findAllByQuery($query);
-        var_dump($data);
+        $book = Book::findByPK(1);
+        var_dump($book);
     }
 }
