@@ -12,13 +12,17 @@ class m_1464954644_createBooks
     {
         $this->createTable('books', [
             'title' => ['type' => 'string'],
-            '__author_id' => ['type' => 'link'],
-            'published' => ['type' => 'date']
+            'published' => ['type' => 'date'],
+        ]);
+        $this->createTable('authors_to_books', [
+           '__author_id' => ['type' => 'link'],
+           '__book_id' => ['type' => 'link'],
         ]);
     }
 
     public function down()
     {
+        $this->dropTable('authors_to_books');
         $this->dropTable('books');
     }
     

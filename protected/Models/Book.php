@@ -24,7 +24,7 @@ class Book
             'published' => ['type' => 'string']
         ],
         'relations' => [
-            'author' => ['type' => self::BELONGS_TO, 'model' => Author::class],
+            'authors' => ['type' => self::MANY_TO_MANY, 'model' => Author::class],
         ]
     ];
 } 

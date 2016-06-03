@@ -17,5 +17,6 @@ class Index
     {
         $leo = Author::findByPK(1);
         var_dump($leo->books);
+        die;
     }
 }

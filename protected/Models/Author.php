@@ -23,7 +23,7 @@ class Author
             'birthday' => ['type' => 'date']
         ],
         'relations' => [
-            'books' => ['type' => self::HAS_MANY, 'model' => Book::class],
+            'books' => ['type' => self::MANY_TO_MANY, 'model' => Book::class],
         ]
     ];
 } 
