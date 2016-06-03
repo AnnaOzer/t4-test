@@ -21,7 +21,7 @@ class Index
             ->where('age>18')
             ->limit(10);
 
-        $data = Person::getDbConnection()->query($query)->fetchAll();
+        $data = Person::findAllByQuery($query);
         var_dump($data);
     }
 }
