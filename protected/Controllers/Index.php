@@ -16,9 +16,13 @@ class Index
 {
     public function actionDefault()
     {
-        $cat = new Category();
-        $cat->title = 'Книги';
-        $cat->save();
+        $cat = Category::findByTitle('Книги');
+
+        $cat1 = new Category();
+        $cat1->title = "Фантастика";
+        $cat1->parent = $cat;
+        $cat1->save();
+
         die;
     }
 }
