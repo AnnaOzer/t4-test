@@ -1,0 +1,15 @@
+{% extends 'Index.html' %}
+
+{% block content %}
+
+<table class="table table-striped">
+{% for item in items %}
+        <tr>
+            <td>{{ item.title }}</td>
+            <td>{{ item.text }}</td>
+            <td>{{ item.published }}</td>
+        </tr>
+
+{% endfor %}
+</table>
+{% endblock %}
