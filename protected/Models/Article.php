@@ -17,8 +17,10 @@ class Article
     extends Model
 {
     static protected $schema = [
+        'columns' => [
             'title' => ['type' => 'string',],
             'text' => ['type' => 'string',],
             'published' => ['type' => 'date',],
+            ]
     ];
 } 
