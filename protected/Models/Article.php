@@ -18,7 +18,7 @@ class Article
 {
     static protected $schema = [
             'title' => ['type' => 'string',],
-            'text' => ['type' => 'text', 'length' =>'long',],
+            'text' => ['type' => 'string',],
             'published' => ['type' => 'date',],
     ];
 } 
