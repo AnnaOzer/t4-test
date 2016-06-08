@@ -1,0 +1,40 @@
+{% extends 'Index.html' %}
+
+{% block content %}
+
+<form action="/panelarticles/save" method="post">
+    <div class="row">
+        <div class="col-xs-4">
+            Название статьи:
+        </div>
+        <div class="col-xs-8">
+            <input type="text" name="article[title]" size="50">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">
+            Текст статьи:
+        </div>
+        <div class="col-xs-8">
+            <textarea name="article[text]" rows="5" cols="49"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">
+            Дата статьи:
+        </div>
+        <div class="col-xs-8">
+            <input type="date" name="article[published]">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">
+        </div>
+        <div class="col-xs-8">
+            <input type="submit" class="btn btn-success" value="Сохранить статью">
+        </div>
+    </div>
+
+</form>
+
+{% endblock %}

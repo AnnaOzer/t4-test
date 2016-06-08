@@ -1,0 +1,32 @@
+{% extends 'Index.html' %}
+
+{% block content %}
+
+<form action="/panelarticles/update?id={{ item.Pk }}" method="post">
+    <div class="col-xs-4">
+        Название статьи:
+    </div>
+    <div class="col-xs-8">
+        <input type="text" name="article[title]" size="50" value="{{ item.title }}">
+    </div>
+    <div class="col-xs-4">
+        Текст статьи:
+    </div>
+    <div class="col-xs-8">
+        <textarea name="article[text]" rows="5" cols="49">{{ item.text }}</textarea>
+    </div>
+    <div class="col-xs-4">
+        Дата статьи:
+    </div>
+    <div class="col-xs-8">
+        <input type="date" name="article[published]" value="{{ item.published }}">
+    </div>
+    <div class="col-xs-4">
+    </div>
+    <div class="col-xs-8">
+        <input type="submit" class="btn btn-success" value="Сохранить статью">
+    </div>
+
+</form>
+
+{% endblock %}
